@@ -1,0 +1,193 @@
+Project Brief: Airbnb-Style Accommodation Booking Website
+Create a fully functional accommodation booking website based on the three provided screenshots using React + TypeScript, Tailwind CSS, and Vite. The website should replicate "The Bhowmick's Bungalow Shoroma" listing in Tezpur, India.
+Tech Stack Requirements:
+
+React 18+ with TypeScript
+Vite for build tooling
+Tailwind CSS for styling
+React Router DOM for navigation
+Hero Icons (no emojis)
+MongoDB integration setup (leave empty for now)
+
+Page Structure & Routing:
+
+Main Listing Page (/) - Primary accommodation details
+Photo Gallery Page (/photos) - Full photo gallery view
+Dashboard Page (/dashboard) - Tenant management (empty for now)
+
+Detailed Implementation Requirements:
+1. Header Component:
+
+Airbnb logo on the left
+Hamburger menu on the right
+Initially hidden, only appears when user scrolls down
+Sticky positioning with smooth slide-down animation
+White background with subtle shadow
+
+2. Main Content Layout:
+Property Title Section:
+
+"The Bhowmick's Bungalow Shoroma" as main heading
+Share and Save buttons on the right (heart icon for save)
+
+Image Gallery Section:
+
+Large main image on the left (livingroom/dining area)
+4 smaller images in 2x2 grid on the right:
+
+Top right: Night exterior view
+Top far right: Bedroom with photo gallery wall
+Bottom right: Bedroom with green bedding
+Bottom far right: Modern kitchen/bathroom
+
+
+"Show all photos" button overlay on bottom right image
+Clicking opens /photos route with full gallery
+All images should have hover effects and proper aspect ratios
+
+3. Content Section (Two-column layout):
+Left Column:
+
+Property details: "Room in Tezpur, India"
+"1 bed · Private attached bathroom"
+Star rating: "★ 5.0 · 4 reviews" (clickable link to reviews section)
+Host information with avatar: "Hosted by Arita, Superhost · 6 years hosting"
+
+Feature Cards:
+
+"Exceptional check-in experience" with icon
+"Room in a bed and breakfast" with icon
+"Free cancellation before 12:00 pm on 21 Aug" with icon
+
+About Section:
+
+Detailed description about the 150-year-old bungalow
+Traditional family cuisine mention
+Green foliage and comfort living details
+
+Amenities Section:
+
+Grid layout with icons:
+
+Lock on bedroom door
+WiFi
+Free parking on premises
+Air conditioning
+Carbon monoxide alarm
+Smoke alarm
+
+
+
+4. Right Column (Booking Card):
+
+Sticky behavior: slides down with scroll, stops at calendar section
+Price: "₹5,022 for 2 nights"
+"Prices include all fees" notice
+Check-in/Check-out date pickers (default: 8/22/2025 - 8/24/2025)
+Guest selector dropdown (default: 1 guest)
+Large pink "Reserve" button
+"You won't be charged yet" disclaimer
+
+5. Calendar Implementation:
+
+Interactive calendar showing August 2025 and September 2025
+Selected dates: August 22-24 highlighted
+Navigation arrows between months
+"Clear dates" option
+Prevent reservation if no dates selected
+Clickable date selection with visual feedback
+
+6. Reviews Section:
+
+"★ 5.0 · 4 reviews" heading
+Rating breakdown:
+
+Overall rating: 5 stars
+Cleanliness: 4.8
+Accuracy: 4.8
+Check-in: 5.0
+Communication: 4.5
+Location: 4.8
+Value: 5.0
+
+
+Visual rating bars and category icons
+
+7. Payment Integration:
+
+Include UPI payment option
+Add other common Indian payment methods
+Form validation for required fields
+
+8. Footer:
+
+Clean, modern design consistent with Airbnb styling
+Use Hero Icons only (no emojis)
+Include relevant links and information
+Responsive design
+
+9. Dashboard (Future Implementation):
+
+Empty structure for tenant management
+Sections for:
+
+Current tenants (arrival/departure)
+Upcoming bookings
+MongoDB connection placeholder
+
+
+Leave implementation details for later
+
+Technical Specifications:
+Responsive Design:
+
+Mobile-first approach
+Tablet and desktop breakpoints
+Image gallery adapts to screen size
+Booking card repositions on mobile
+
+State Management:
+
+Date selection state
+Guest count state
+Photo gallery navigation
+Scroll position for header visibility
+
+Animation Requirements:
+
+Smooth scroll-triggered header appearance
+Booking card sticky behavior with smooth transitions
+Hover effects on images and buttons
+Calendar date selection animations
+
+Accessibility:
+
+Proper ARIA labels
+Keyboard navigation support
+Screen reader compatibility
+High contrast ratios
+
+Performance:
+
+Optimized images with proper loading
+Code splitting for routes
+Lazy loading for photo gallery
+Efficient re-renders
+
+Key Interactive Features:
+
+Date range selection with validation
+Dynamic pricing calculation
+Guest count adjustment
+Photo gallery navigation
+Smooth scrolling to sections
+Responsive image loading
+
+Color Scheme:
+
+Primary: Airbnb pink (#FF385C)
+Backgrounds: White and light gray
+Text: Dark gray (#222222)
+Borders: Light gray (#DDDDDD)
+
+Create a pixel-perfect recreation of the provided screenshots with full functionality, ensuring all interactive elements work as specified and the design matches exactly.

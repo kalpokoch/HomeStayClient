@@ -1,0 +1,170 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(222, 84%, 4.9%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(222, 84%, 4.9%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(222, 84%, 4.9%);
+  --primary: hsl(221.2, 83.2%, 53.3%);
+  --primary-foreground: hsl(210, 40%, 98%);
+  --secondary: hsl(210, 40%, 96%);
+  --secondary-foreground: hsl(222.2, 84%, 4.9%);
+  --muted: hsl(210, 40%, 96%);
+  --muted-foreground: hsl(215.4, 16.3%, 46.9%);
+  --accent: hsl(210, 40%, 96%);
+  --accent-foreground: hsl(222.2, 84%, 4.9%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(210, 40%, 98%);
+  --border: hsl(214.3, 31.8%, 91.4%);
+  --input: hsl(214.3, 31.8%, 91.4%);
+  --ring: hsl(221.2, 83.2%, 53.3%);
+  --chart-1: hsl(12, 76%, 61%);
+  --chart-2: hsl(173, 58%, 39%);
+  --chart-3: hsl(197, 37%, 24%);
+  --chart-4: hsl(43, 74%, 66%);
+  --chart-5: hsl(27, 87%, 67%);
+  --radius: 0.5rem;
+  
+  /* Airbnb specific colors */
+  --airbnb-pink: hsl(347, 100%, 60%);
+  --airbnb-pink-dark: hsl(347, 100%, 55%);
+  --airbnb-dark: hsl(222, 84%, 4.9%);
+  --airbnb-gray: hsl(220, 9%, 46%);
+  --airbnb-light-gray: hsl(210, 20%, 98%);
+  --airbnb-border: hsl(220, 13%, 87%);
+}
+
+.dark {
+  --background: hsl(222.2, 84%, 4.9%);
+  --foreground: hsl(210, 40%, 98%);
+  --card: hsl(222.2, 84%, 4.9%);
+  --card-foreground: hsl(210, 40%, 98%);
+  --popover: hsl(222.2, 84%, 4.9%);
+  --popover-foreground: hsl(210, 40%, 98%);
+  --primary: hsl(217.2, 91.2%, 59.8%);
+  --primary-foreground: hsl(222.2, 84%, 4.9%);
+  --secondary: hsl(217.2, 32.6%, 17.5%);
+  --secondary-foreground: hsl(210, 40%, 98%);
+  --muted: hsl(217.2, 32.6%, 17.5%);
+  --muted-foreground: hsl(215, 20.2%, 65.1%);
+  --accent: hsl(217.2, 32.6%, 17.5%);
+  --accent-foreground: hsl(210, 40%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(210, 40%, 98%);
+  --border: hsl(217.2, 32.6%, 17.5%);
+  --input: hsl(217.2, 32.6%, 17.5%);
+  --ring: hsl(224.3, 76.3%, 94.1%);
+  --chart-1: hsl(220, 70%, 50%);
+  --chart-2: hsl(160, 60%, 45%);
+  --chart-3: hsl(30, 80%, 55%);
+  --chart-4: hsl(280, 65%, 60%);
+  --chart-5: hsl(340, 75%, 55%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    /* outline: solid red; */
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}
+
+/* Custom scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Airbnb specific utilities */
+.text-airbnb-pink {
+  color: var(--airbnb-pink);
+}
+
+.bg-airbnb-pink {
+  background-color: var(--airbnb-pink);
+}
+
+.hover\:bg-airbnb-pink:hover {
+  background-color: var(--airbnb-pink-dark);
+}
+
+.text-airbnb-dark {
+  color: var(--airbnb-dark);
+}
+
+.text-airbnb-gray {
+  color: var(--airbnb-gray);
+}
+
+.bg-airbnb-light-gray {
+  background-color: var(--airbnb-light-gray);
+}
+
+.border-airbnb-border {
+  border-color: var(--airbnb-border);
+}
+
+/* Animation utilities */
+.transition-header {
+  transition: transform 0.3s ease-in-out;
+}
+
+.slide-down {
+  transform: translateY(0);
+}
+
+.slide-up {
+  transform: translateY(-100%);
+}
+
+/* Calendar specific styles */
+.calendar-selected {
+  @apply bg-airbnb-dark text-white;
+}
+
+.calendar-in-range {
+  @apply bg-gray-200;
+}
+
+/* Image hover effects */
+.image-hover-effect {
+  transition: filter 0.3s ease;
+}
+
+.image-hover-effect:hover {
+  filter: brightness(0.9);
+}
+
+/* Rating bar animations */
+.rating-bar {
+  transition: width 0.6s ease-in-out;
+}
+
+/* Sticky positioning fixes */
+.sticky-booking-card {
+  position: sticky;
+  top: 6rem;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 1024px) {
+  .sticky-booking-card {
+    position: relative;
+    top: auto;
+  }
+}
+/* Add this to your global CSS file */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}
+
+.sticky-booking-card {
+  will-change: transform;
+}
